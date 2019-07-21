@@ -2,5 +2,10 @@ cmake_minimum_required(VERSION 3.14)
 project(learn_opengl)
 
 set(CMAKE_CXX_STANDARD 11)
+set(FREEGLUT "D:/Workspace/library/freeglut")
+
+include_directories(${FREEGLUT}/include)
+link_directories(${FREEGLUT}/lib)
 
 add_executable(learn_opengl main.cpp)
+target_link_libraries(learn_opengl -lOpenGL32 -lfreeGlut)
