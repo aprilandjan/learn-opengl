@@ -6,6 +6,6 @@ set(CMAKE_CXX_STANDARD 11)
 #include_directories(${FREEGLUT}/include)
 #link_directories(${FREEGLUT}/lib)
 
-add_executable(learn_opengl main.cpp src/1-hello-world/hello-world.cpp src/1-hello-world/hello-world.h)
+add_executable(learn_opengl main.cpp src/1-hello-world/hello-world.cpp src/1-hello-world/hello-world.h src/1-hello-world/triangle.cpp src/1-hello-world/triangle.h)
 #target_link_libraries(learn_opengl libopengl32.a libglu32.a libfreeglut.a)
 target_link_libraries(learn_opengl -lOpenGL32 -lfreeGLUT)
