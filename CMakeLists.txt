@@ -3,7 +3,7 @@ project(learn_opengl)
 
 set(CMAKE_CXX_STANDARD 11)
 #set(FREEGLUT "D:/Workspace/library/freeglut")
-#include_directories(${FREEGLUT}/include)
+include_directories(./GLTools/include)
 #link_directories(${FREEGLUT}/lib)
 
 add_executable(learn_opengl main.cpp src/1-hello-world/hello-world.cpp src/1-hello-world/hello-world.h src/1-hello-world/triangle.cpp src/1-hello-world/triangle.h)
