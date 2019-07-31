@@ -35,7 +35,27 @@ void handleRender() {
     glutSwapBuffers();
 }
 
-void draw_triangle(int argc, char * argv[]) {
+//  setup render context
+void setupRC() {
+    //  set background color
+    //  R G B A
+    glClearColor(0.0f, 0.0f, 1.0f, 1.0f);
+
+    shaderManager.InitializeStockShaders();
+
+    //  triangle
+    GLfloat verts[] = {
+            -0.5f, 0.0f, 0.0f,
+            0.5f, 0.0f, 0.0f,
+            0.0f, 0.5f, 0.0f,
+    };
+
+    triangleBatch.Begin(GL_TRIANGLES, 3);
+    triangleBatch.CopyVertexData3f(verts);
+    triangleBatch.End();
+}
+
+int draw_triangle(int argc, char * argv[]) {
 //    gltSetWorkingDirectory(argv[0]);  //  this may needed in mac os
     glutInit(&argc, argv);
     //  set display flags
@@ -47,4 +67,14 @@ void draw_triangle(int argc, char * argv[]) {
     //  events
     glutReshapeFunc(handleSizeChange);
     glutDisplayFunc(handleRender);
+
+    GLenum err = glewInit();
+    if (GLEW_OK != err) {
+        std::cout << "Glew Error: " << glewGetErrorString(err) << "\n";
+        return 1;
+    }
+
+    setupRC();
+
+    return 0;
 }
