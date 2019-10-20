@@ -8,7 +8,9 @@ set(FREEGLUT "D:/Workspace/library/freeglut")
 # include headers
 include_directories(${FREEGLUT}/include)
 # add static link libraries
-link_directories(${FREEGLUT}/lib)
+link_directories(${FREEGLUT}/lib/x64)
+
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -D FREEGLUT_STATIC")
 
 # GLTools
 set(GLTOOLS "D:/Workspace/library/GLTools")
