@@ -10,7 +10,7 @@
 
 ### GLEW/GLTools
 
-`GLTools` is utility tools for openGL.
+`GLTools` is utility tools for openGL, built upon `GLEW` which means `GL Extension Wrangler Library`.
 
 ## TODO
 
