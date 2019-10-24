@@ -23,5 +23,5 @@
 - <http://freeglut.sourceforge.net/>
 - <https://www.gamedev.net/blogs/entry/2255576-preparing-to-learn-opengl-toolchain-setup/>
 - <http://www.code-by.org/viewtopic.php?f=47&t=122&sid=d6aa4aecccc713b5288514322ad68775>
-- <https://blog.csdn.net/foreverzili/article/details/83794301>
+- <https://stackoverflow.com/questions/5608520/opengl-superbible-5th-edition-set-up-problems>
 - <https://learnopengl.com/Getting-started/OpenGL>
